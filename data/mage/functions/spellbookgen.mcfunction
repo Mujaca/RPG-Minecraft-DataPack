@@ -1,0 +1,4 @@
+tag @e[type=item,nbt={Item:{id:"minecraft:writable_book"}},distance=..1] add speelbook
+execute as @e[type=minecraft:item,nbt={Item:{id:"minecraft:writable_book",Count:1b}}] at @s if block ~ ~-1 ~ enchanting_table run tag @s add craftedspellbook
+execute as @e[tag=craftedspellbook] at @s run summon minecraft:item ~ ~ ~ {Glowing:1b,CustomNameVisible:1b,PickupDelay:0,Motion:[0.0,0.1,0.0],CustomName:'{"text":"Spellbook","color":"green"}',Item:{id:"minecraft:written_book",Count:1b,tag:{pages:['{"text":"Feuerball\\n\\nHerstellung : BlazeRod + Flint and Steel auf den Enchanting Table\\n\\nMana Kosten : 15 Mana per Use\\n\\nCooldown : 1 Sec\\n\\nBase Damage : 5/10/20"}','{"text":"Unbekannte Zauber : \\n\\n-"}'],title:Speelbook,author:Zaubertisch}}}
+kill @e[tag=craftedspellbook]
