@@ -16,10 +16,11 @@ scoreboard objectives add mana dummy
 scoreboard objectives add maxmana dummy
 scoreboard objectives add manaregen dummy
 scoreboard objectives add manaregentimer dummy
+scoreboard objectives add click minecraft.used:minecraft.carrot_on_a_stick
+scoreboard objectives add fireballcooldown dummy
 
 scoreboard objectives add klassen trigger
 scoreboard objectives add job trigger
-scoreboard objectives add spell trigger
 
 scoreboard objectives add updatestats dummy
 scoreboard objectives add null dummy
