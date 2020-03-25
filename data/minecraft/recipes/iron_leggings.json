@@ -1,0 +1,13 @@
+{
+    "type": "crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "minecraft:bedrock"
+        }
+    ],
+    "result": {
+        "item": "minecraft:iron_leggings",
+        "count": 1
+    }
+}
+
