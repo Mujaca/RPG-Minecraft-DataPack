@@ -21,4 +21,4 @@ execute if entity @s[scores={fireballcooldown=0}] if entity @e[tag=fireballspell
 execute if entity @s[scores={fireballcooldown=0}] if entity @e[tag=fireballspell,type=armor_stand,distance=..2] if score @s[tag=fireballspell,type=armor_stand,distance=..2] damage < @s null run scoreboard players set @e[tag=fireballspell,type=armor_stand,distance=..2] damage 0
 execute if entity @s[scores={fireballcooldown=0}] if entity @e[tag=fireballspell,type=armor_stand,distance=..2] run scoreboard players operation @s health -= @e[type=minecraft:armor_stand,tag=fireballspell,distance=..1] damage
 execute if entity @s[scores={fireballcooldown=0}] if entity @e[tag=fireballspell,type=armor_stand,distance=..2] run function healthsystem:health
-execute if entity @s[scores={fireballcooldown=0}] if entity @e[tag=fireballspell,type=armor_stand,distance=..2] run kill @e[type=armor_stand,tag=fireballspell,distance=..1]
+execute if entity @s[scores={fireballcooldown=0}] if entity @e[tag=fireballspell,type=armor_stand,distance=..2] run kill @e[type=armor_stand,tag=fireballspell,distance=..2]

@@ -1,6 +1,6 @@
 execute as @a[nbt={Inventory:[{Slot:-106b,id:"minecraft:written_book",Count:1b,tag:{title:"Spellbook",author:"Zaubertisch"}}]},tag=!given] run scoreboard players add @s maxmana 50
-execute as @a[nbt={Inventory:[{Slot:-106b,id:"minecraft:written_book",Count:1b,tag:{title:"Spellbook",author:"Zaubertisch"}}]},tag=!given] run scoreboard players add @s magicpower 15
+execute as @a[nbt={Inventory:[{Slot:-106b,id:"minecraft:written_book",Count:1b,tag:{title:"Spellbook",author:"Zaubertisch"}}]},tag=!given] run scoreboard players add @s magicpower 30
 execute as @a[nbt={Inventory:[{Slot:-106b,id:"minecraft:written_book",Count:1b,tag:{title:"Spellbook",author:"Zaubertisch"}}]}] run tag @s add given
 execute as @a[nbt=!{Inventory:[{Slot:-106b,id:"minecraft:written_book",Count:1b,tag:{title:"Spellbook",author:"Zaubertisch"}}]},tag=given] run scoreboard players remove @s maxmana 50
-execute as @a[nbt=!{Inventory:[{Slot:-106b,id:"minecraft:written_book",Count:1b,tag:{title:"Spellbook",author:"Zaubertisch"}}]},tag=given] run scoreboard players remove @s magicpower 15
+execute as @a[nbt=!{Inventory:[{Slot:-106b,id:"minecraft:written_book",Count:1b,tag:{title:"Spellbook",author:"Zaubertisch"}}]},tag=given] run scoreboard players remove @s magicpower 30
 execute as @a[nbt=!{Inventory:[{Slot:-106b,id:"minecraft:written_book",Count:1b,tag:{title:"Spellbook",author:"Zaubertisch"}}]}] run tag @s remove given
