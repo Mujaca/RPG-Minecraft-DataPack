@@ -17,5 +17,6 @@ bossbar set minecraft:knight players @a[team=knight]
 bossbar set minecraft:engeenier players @a[team=engeenier]
 
 execute as @a at @s if score @s health > @s maxhealth store result score @s health run scoreboard players get @s maxhealth
+execute as @a at @s if score @s mana > @s maxmana store result score @s mana run scoreboard players get @s maxmana
 effect give @a minecraft:resistance 1000000 10 true
 scoreboard players set @a null 0
