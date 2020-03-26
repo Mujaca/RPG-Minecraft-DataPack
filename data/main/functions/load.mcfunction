@@ -19,6 +19,7 @@ scoreboard objectives add manaregentimer dummy
 scoreboard objectives add click minecraft.used:minecraft.carrot_on_a_stick
 scoreboard objectives add fireballcooldown dummy
 scoreboard objectives add icestaffcooldown dummy
+scoreboard objectives add thundercooldown dummy
 
 scoreboard objectives add klassen trigger
 scoreboard objectives add job trigger
