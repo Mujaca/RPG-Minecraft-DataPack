@@ -9,12 +9,12 @@ execute if entity @s[nbt={SelectedItem:{id:"minecraft:carrot_on_a_stick",tag:{Un
 execute if entity @s[tag=castetthunder] run scoreboard players operation @e[tag=thunderspell,distance=..1] damage += @s magicpower
 execute if entity @s[tag=castetthunder] run tag @s remove castetthunder
 
-execute as @e[type=armor_stand,tag=thunderspell] at @s run tp ^ ^ ^0.1
+execute as @e[type=armor_stand,tag=thunderspell] at @s run tp ^ ^ ^0.3
 execute as @e[type=armor_stand,tag=thunderspell] at @s run particle minecraft:cloud ~ ~ ~ 0 0 0 0.1 1 force @a
 
 execute if score @s thundercooldown > @s null run scoreboard players remove @s thundercooldown 1
 execute as @e[type=armor_stand,tag=thunderspell] run scoreboard players add @s thundercooldown 1
-execute as @e[type=armor_stand,tag=thunderspell,scores={thundercooldown=600..}] run kill @s
+execute as @e[type=armor_stand,tag=thunderspell,scores={thundercooldown=400..}] run kill @s
 
 execute if entity @s[scores={thundercooldown=0}] if entity @e[tag=thunderspell,type=armor_stand,distance=..2,scores={damage=1}] run summon minecraft:lightning_bolt ~ ~ ~
 execute if entity @s[scores={thundercooldown=0}] if entity @e[tag=thunderspell,type=armor_stand,distance=..2,scores={damage=2}] run summon minecraft:lightning_bolt ~ ~ ~
