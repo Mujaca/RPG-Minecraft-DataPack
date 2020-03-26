@@ -3,9 +3,9 @@ execute if entity @s[tag=castetfireball] run summon minecraft:armor_stand ~ ~ ~ 
 execute if entity @s[tag=castetfireball] run tp @e[type=armor_stand,tag=fireballspell,distance=..1] @s
 execute if entity @s[tag=castetfireball] run scoreboard players set @s fireballcooldown 20
 execute if entity @s[tag=castetfireball] run scoreboard players remove @s mana 15
-execute if entity @s[nbt={Item:{id:"carrot_on_a_stick",tag:{Unbreakable:1b,Damage:4}}}] run scoreboard players set @e[tag=fireballspell,distance=..1] damage 5
-execute if entity @s[nbt={Item:{id:"carrot_on_a_stick",tag:{Unbreakable:1b,Damage:5}}}] run scoreboard players set @e[tag=fireballspell,distance=..1] damage 10
-execute if entity @s[nbt={Item:{id:"carrot_on_a_stick",tag:{Unbreakable:1b,Damage:6}}}] run scoreboard players set @e[tag=fireballspell,distance=..1] damage 20
+execute if entity @s[nbt={SelectedItem:{id:"minecraft:carrot_on_a_stick",tag:{Unbreakable:1b,Damage:4}}},tag=castetfireball] run scoreboard players set @e[tag=fireballspell,distance=..1] damage 5
+execute if entity @s[nbt={SelectedItem:{id:"minecraft:carrot_on_a_stick",tag:{Unbreakable:1b,Damage:5}}},tag=castetfireball] run scoreboard players set @e[tag=fireballspell,distance=..1] damage 10
+execute if entity @s[nbt={SelectedItem:{id:"minecraft:carrot_on_a_stick",tag:{Unbreakable:1b,Damage:6}}},tag=castetfireball] run scoreboard players set @e[tag=fireballspell,distance=..1] damage 20
 execute if entity @s[tag=castetfireball] run scoreboard players operation @e[tag=fireballspell,distance=..1] damage += @s magicpower
 execute if entity @s[tag=castetfireball] run tag @s remove castetfireball
 
@@ -16,7 +16,8 @@ execute if score @s fireballcooldown > @s null run scoreboard players remove @s 
 execute as @e[type=armor_stand,tag=fireballspell] run scoreboard players add @s fireballcooldown 1
 execute as @e[type=armor_stand,tag=fireballspell,scores={fireballcooldown=200..}] run kill @s
 
-execute if entity @s[scores={fireballcooldown=0}] if entity @e[tag=fireballspell,type=armor_stand,distance=..2] run scoreboard players operation @e[type=armor_stand,tag=fireballspell,distance=..2] damage -= @s magicdefense
+execute if entity @s[scores={fireballcooldown=0}] if entity @e[tag=fireballspell,type=armor_stand,distance=..2,tag=!hit] run scoreboard players operation @e[type=armor_stand,tag=fireballspell,distance=..2] damage -= @s magicdefense
+execute if entity @s[scores={fireballcooldown=0}] if entity @e[tag=fireballspell,type=armor_stand,distance=..2,tag=!hit] run tag @e[type=armor_stand,tag=fireballspell,distance=..2] add hit
 execute if entity @s[scores={fireballcooldown=0}] if entity @e[tag=fireballspell,type=armor_stand,distance=..2] if score @s[tag=fireballspell,type=armor_stand,distance=..2] damage < @s null run scoreboard players set @e[tag=fireballspell,type=armor_stand,distance=..2] damage 0
 execute if entity @s[scores={fireballcooldown=0}] if entity @e[tag=fireballspell,type=armor_stand,distance=..2] run scoreboard players operation @s health -= @e[type=minecraft:armor_stand,tag=fireballspell,distance=..1] damage
 execute if entity @s[scores={fireballcooldown=0}] if entity @e[tag=fireballspell,type=armor_stand,distance=..2] run function healthsystem:health
