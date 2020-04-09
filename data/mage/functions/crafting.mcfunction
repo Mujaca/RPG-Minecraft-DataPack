@@ -7,10 +7,17 @@ execute as @e[tag=base1] at @s run kill @s
 
 tag @e[type=item,nbt={Item:{id:"minecraft:blaze_rod"}},distance=..2] add magicstick
 tag @e[type=item,nbt={Item:{id:"minecraft:iron_ingot"}},distance=..2] add magicglowstone
-execute as @e[tag=magicstick] at @s if entity @e[tag=magicglowstone,distance=..1] if block ~ ~ ~ cauldron run tag @s add base2
+execute as @e[tag=magicstick] at @s if entity @e[tag=magicglowstone,distance=..1] if block ~ ~ ~ enchanting_table run tag @s add base2
 execute as @e[tag=base2] at @s run kill @e[tag=magicglowstone,distance=..1]
 execute as @e[tag=base2] at @s run summon minecraft:item ~ ~ ~ {Glowing:1b,CustomNameVisible:1b,PickupDelay:0,Motion:[0.0,0.1,0.0],CustomName:'{"text":"Staffbase Tier 2","color":"green"}',Item:{id:"minecraft:carrot_on_a_stick",Count:1b,tag:{display:{Name:'{"text":"Staffbase Tier 2","color":"green"}'},Unbreakable:1b,Damage:2}}}
 execute as @e[tag=base2] at @s run kill @s
+
+tag @e[type=item,nbt={Item:{id:"minecraft:carrot_on_a_stick",tag:{Damage:2,Unbreakable:1b}}},distance=..2] add magicstick
+tag @e[type=item,nbt={Item:{id:"minecraft:nether_star"}},distance=..2] add netherstar
+execute as @e[tag=magicstick] at @s if entity @e[tag=netherstar,distance=..1] if block ~ ~ ~ enchanting_table run tag @s add base3 
+execute as @e[tag=base3] at @s run kill @e[tag=netherstar,distance=..1]
+execute as @e[tag=base3] at @s run summon minecraft:item ~ ~ ~ {Glowing:1b,CustomNameVisible:1b,PickupDelay:0,Motion:[0.0,0.1,0.0],CustomName:'{"text":"Staffbase Tier 3","color":"green"}',Item:{id:"minecraft:carrot_on_a_stick",Count:1b,tag:{display:{Name:'{"text":"Staffbase Tier 2","color":"green"}'},Unbreakable:1b,Damage:3}}}
+execute as @e[tag=base3] at @s run kill @s
 
 tag @e[type=item,nbt={Item:{id:"minecraft:carrot_on_a_stick",tag:{Damage:1,Unbreakable:1b}}},distance=..2] add craftedbase1
 tag @e[type=item,nbt={Item:{id:"minecraft:flint_and_steel"}},distance=..2] add flintandsteel
@@ -74,3 +81,24 @@ execute as @e[tag=craftedbase3] at @s if entity @e[tag=ghasttear,distance=..1] i
 execute as @e[tag=thunderstaff3] at @s run kill @e[tag=ghasttear,distance=..1]
 execute as @e[tag=thunderstaff3] at @s run summon minecraft:item ~ ~ ~ {Glowing:1b,CustomNameVisible:1b,PickupDelay:0,Motion:[0.0,0.1,0.0],CustomName:'{"text":"Throwable Thunder Tier 3","color":"green"}',Item:{id:"minecraft:carrot_on_a_stick",Count:1b,tag:{display:{Name:'{"text":"Throwable Thunder Tier 3","color":"white"}'},Unbreakable:1b,Damage:12}}}
 execute as @e[tag=thunderstaff3] at @s run kill @s
+
+tag @e[type=item,nbt={Item:{id:"minecraft:carrot_on_a_stick",tag:{Damage:1,Unbreakable:1b}}},distance=..2] add craftedbase1
+tag @e[type=item,nbt={Item:{id:"minecraft:fire_charge"}},distance=..2] add firecharge
+execute as @e[tag=craftedbase1] at @s if entity @e[tag=firecharge,distance=..1] if block ~ ~ ~ enchanting_table run tag @s add meteorstaff1
+execute as @e[tag=meteorstaff1] at @s run kill @e[tag=firecharge,distance=..1]
+execute as @e[tag=meteorstaff1] at @s run summon minecraft:item ~ ~ ~ {Glowing:1b,CustomNameVisible:1b,PickupDelay:0,Motion:[0.0,0.1,0.0],CustomName:'{"text":"Meteor erschaffen Tier 1","color":"green"}',Item:{id:"minecraft:carrot_on_a_stick",Count:1b,tag:{display:{Name:'{"text":"Meteor erschaffen Tier 1","color":"dark_red"}'},Unbreakable:1b,Damage:13}}}
+execute as @e[tag=meteorstaff1] at @s run kill @s
+
+tag @e[type=item,nbt={Item:{id:"minecraft:carrot_on_a_stick",tag:{Damage:2,Unbreakable:1b}}},distance=..2] add craftedbase2
+tag @e[type=item,nbt={Item:{id:"minecraft:fire_charge"}},distance=..2] add firecharge
+execute as @e[tag=craftedbase2] at @s if entity @e[tag=firecharge,distance=..1] if block ~ ~ ~ enchanting_table run tag @s add meteorstaff2
+execute as @e[tag=meteorstaff2] at @s run kill @e[tag=firecharge,distance=..1]
+execute as @e[tag=meteorstaff2] at @s run summon minecraft:item ~ ~ ~ {Glowing:1b,CustomNameVisible:1b,PickupDelay:0,Motion:[0.0,0.1,0.0],CustomName:'{"text":"Meteor erschaffen Tier 2","color":"green"}',Item:{id:"minecraft:carrot_on_a_stick",Count:1b,tag:{display:{Name:'{"text":"Meteor erschaffen Tier 2","color":"dark_red"}'},Unbreakable:1b,Damage:14}}}
+execute as @e[tag=meteorstaff2] at @s run kill @s
+
+tag @e[type=item,nbt={Item:{id:"minecraft:carrot_on_a_stick",tag:{Damage:3,Unbreakable:1b}}},distance=..2] add craftedbase3
+tag @e[type=item,nbt={Item:{id:"minecraft:fire_charge"}},distance=..2] add firecharge
+execute as @e[tag=craftedbase3] at @s if entity @e[tag=firecharge,distance=..1] if block ~ ~ ~ enchanting_table run tag @s add meteorstaff3
+execute as @e[tag=meteorstaff3] at @s run kill @e[tag=firecharge,distance=..1]
+execute as @e[tag=meteorstaff3] at @s run summon minecraft:item ~ ~ ~ {Glowing:1b,CustomNameVisible:1b,PickupDelay:0,Motion:[0.0,0.1,0.0],CustomName:'{"text":"Meteor erschaffen Tier 3","color":"green"}',Item:{id:"minecraft:carrot_on_a_stick",Count:1b,tag:{display:{Name:'{"text":"Meteor erschaffen Tier 3","color":"dark_red"}'},Unbreakable:1b,Damage:15}}}
+execute as @e[tag=meteorstaff3] at @s run kill @s

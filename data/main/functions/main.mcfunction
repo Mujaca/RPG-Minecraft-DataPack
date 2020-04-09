@@ -1,6 +1,7 @@
 execute as @a[tag=!setup] at @s run function main:setup
 execute as @a at @s run function main:playerinfos
 execute as @a at @s run function healthsystem:healthregen
+execute as @a at @s if score @s damagedealt > @s null run function healthsystem:strength
 execute as @a at @s if score @s damage > @s null run function healthsystem:health
 
 execute as @a[team=nojob] at @s run function nojob:main

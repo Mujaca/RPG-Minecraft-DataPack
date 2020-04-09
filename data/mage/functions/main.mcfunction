@@ -6,6 +6,7 @@ function mage:tags
 function mage:fireball
 function mage:icestaff
 function mage:thunderstaff
+function mage:meteorstaff
 function healthsystem:manaregen
 
 scoreboard players reset @s click
