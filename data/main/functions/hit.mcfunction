@@ -18,3 +18,6 @@ execute if entity @s[scores={thundercooldown=0..1180}] if entity @e[tag=thunders
 
 scoreboard players set @e[type=!minecraft:player,type=!armor_stand,tag=!cooldown2] thundercooldown 0
 tag @e[tag=!cooldown2] add cooldown2
+
+execute if entity @s[tag=!heal] if entity @e[tag=healspell,type=armor_stand,distance=..2] run scoreboard players operation @s health += @e[tag=healspell,type=armor_stand,distance=..2] damage
+execute if entity @s[tag=!heal] if entity @e[tag=healspell,type=armor_stand,distance=..2] run kill @s
