@@ -14,11 +14,3 @@ execute as @e[type=armor_stand,tag=thunderspell] at @s run particle minecraft:cl
 execute if score @s thundercooldown > @s null run scoreboard players remove @s thundercooldown 1
 execute as @e[type=armor_stand,tag=thunderspell] run scoreboard players add @s thundercooldown 1
 execute as @e[type=armor_stand,tag=thunderspell,scores={thundercooldown=400..}] run kill @s
-
-execute if entity @s[scores={thundercooldown=0..1180}] if entity @e[tag=thunderspell,type=armor_stand,distance=..2,scores={damage=1}] run summon minecraft:lightning_bolt ~ ~ ~
-execute if entity @s[scores={thundercooldown=0..1180}] if entity @e[tag=thunderspell,type=armor_stand,distance=..2,scores={damage=2}] run summon minecraft:lightning_bolt ~ ~ ~
-execute if entity @s[scores={thundercooldown=0..1180}] if entity @e[tag=thunderspell,type=armor_stand,distance=..2,scores={damage=2}] run summon minecraft:lightning_bolt ~ ~ ~
-execute if entity @s[scores={thundercooldown=0..1180}] if entity @e[tag=thunderspell,type=armor_stand,distance=..2,scores={damage=3}] run summon minecraft:lightning_bolt ~ ~ ~
-execute if entity @s[scores={thundercooldown=0..1180}] if entity @e[tag=thunderspell,type=armor_stand,distance=..2,scores={damage=3}] run summon minecraft:lightning_bolt ~ ~ ~
-execute if entity @s[scores={thundercooldown=0..1180}] if entity @e[tag=thunderspell,type=armor_stand,distance=..2,scores={damage=3}] run summon minecraft:lightning_bolt ~ ~ ~
-execute if entity @s[scores={thundercooldown=0..1180}] if entity @e[tag=thunderspell,type=armor_stand,distance=..2] run kill @e[type=armor_stand,tag=thunderspell,distance=..2]
