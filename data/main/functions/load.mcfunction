@@ -22,6 +22,13 @@ scoreboard objectives add fireballcooldown dummy
 scoreboard objectives add icestaffcooldown dummy
 scoreboard objectives add thundercooldown dummy
 scoreboard objectives add meteorcooldown dummy
+scoreboard objectives add buffcooldown dummy
+scoreboard objectives add omagicpower dummy
+scoreboard objectives add odefense dummy
+scoreboard objectives add ostrength dummy
+scoreboard objectives add omagicdefense dummy
+scoreboard objectives add multiplikator dummy
+scoreboard objectives add buffduration dummy
 
 scoreboard objectives add klassen trigger
 scoreboard objectives add job trigger

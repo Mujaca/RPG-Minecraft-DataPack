@@ -11,11 +11,7 @@ execute as @a[team=paladin] at @s run function paladin:main
 execute as @a[team=knight] at @s run function knight:main
 execute as @a[team=engeenier] at @s run function engeenier:main
 
-bossbar set minecraft:mage players @a[team=mage]
-bossbar set minecraft:priest players @a[team=priest]
-bossbar set minecraft:paladin players @a[team=paladin]
-bossbar set minecraft:knight players @a[team=knight]
-bossbar set minecraft:engeenier players @a[team=engeenier]
+execute as @a run function main:buffs
 
 execute as @a at @s if score @s health > @s maxhealth store result score @s health run scoreboard players get @s maxhealth
 execute as @a at @s if score @s mana > @s maxmana store result score @s mana run scoreboard players get @s maxmana

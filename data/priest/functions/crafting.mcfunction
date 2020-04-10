@@ -60,3 +60,45 @@ execute as @e[tag=craftedbase3] at @s if entity @e[tag=shield,distance=..1] if b
 execute as @e[tag=defense3] at @s run kill @e[tag=shield,distance=..1]
 execute as @e[tag=defense3] at @s run summon minecraft:item ~ ~ ~ {Glowing:1b,CustomNameVisible:1b,PickupDelay:0,Motion:[0.0,0.1,0.0],CustomName:'{"text":"Defense Buff Tier 3","color":"green"}',Item:{id:"minecraft:carrot_on_a_stick",Count:1b,tag:{display:{Name:'{"text":"Defense Buff Tier 3","color":"red"}'},Unbreakable:1b,Damage:21}}}
 execute as @e[tag=defense3] at @s run kill @s
+
+tag @e[type=item,nbt={Item:{id:"minecraft:carrot_on_a_stick",tag:{Damage:1,Unbreakable:1b}}},distance=..2] add craftedbase1
+tag @e[type=item,nbt={Item:{id:"minecraft:prismarine_crystals"}},distance=..2] add prismarinecrystals
+execute as @e[tag=craftedbase1] at @s if entity @e[tag=prismarinecrystals,distance=..1] if block ~ ~ ~ enchanting_table run tag @s add magicpower1
+execute as @e[tag=magicpower1] at @s run kill @e[tag=prismarinecrystals,distance=..1]
+execute as @e[tag=magicpower1] at @s run summon minecraft:item ~ ~ ~ {Glowing:1b,CustomNameVisible:1b,PickupDelay:0,Motion:[0.0,0.1,0.0],CustomName:'{"text":"Magic Power Buff Tier 1","color":"green"}',Item:{id:"minecraft:carrot_on_a_stick",Count:1b,tag:{display:{Name:'{"text":"Magic Power Buff Tier 1","color":"red"}'},Unbreakable:1b,Damage:22}}}
+execute as @e[tag=magicpower1] at @s run kill @s
+
+tag @e[type=item,nbt={Item:{id:"minecraft:carrot_on_a_stick",tag:{Damage:2,Unbreakable:1b}}},distance=..2] add craftedbase2
+tag @e[type=item,nbt={Item:{id:"minecraft:prismarine_crystals"}},distance=..2] add prismarinecrystals
+execute as @e[tag=craftedbase2] at @s if entity @e[tag=prismarinecrystals,distance=..1] if block ~ ~ ~ enchanting_table run tag @s add magicpower2
+execute as @e[tag=magicpower2] at @s run kill @e[tag=prismarinecrystals,distance=..1]
+execute as @e[tag=magicpower2] at @s run summon minecraft:item ~ ~ ~ {Glowing:1b,CustomNameVisible:1b,PickupDelay:0,Motion:[0.0,0.1,0.0],CustomName:'{"text":"Magic Power Buff Tier 2","color":"green"}',Item:{id:"minecraft:carrot_on_a_stick",Count:1b,tag:{display:{Name:'{"text":"Magic Power Buff Tier 2","color":"red"}'},Unbreakable:1b,Damage:23}}}
+execute as @e[tag=magicpower2] at @s run kill @s
+
+tag @e[type=item,nbt={Item:{id:"minecraft:carrot_on_a_stick",tag:{Damage:3,Unbreakable:1b}}},distance=..2] add craftedbase3
+tag @e[type=item,nbt={Item:{id:"minecraft:prismarine_crystals"}},distance=..2] add prismarinecrystals
+execute as @e[tag=craftedbase3] at @s if entity @e[tag=prismarinecrystals,distance=..1] if block ~ ~ ~ enchanting_table run tag @s add magicpower3
+execute as @e[tag=magicpower3] at @s run kill @e[tag=prismarinecrystals,distance=..1]
+execute as @e[tag=magicpower3] at @s run summon minecraft:item ~ ~ ~ {Glowing:1b,CustomNameVisible:1b,PickupDelay:0,Motion:[0.0,0.1,0.0],CustomName:'{"text":"Magic Power Buff Tier 3","color":"green"}',Item:{id:"minecraft:carrot_on_a_stick",Count:1b,tag:{display:{Name:'{"text":"Magic Power Buff Tier 3","color":"red"}'},Unbreakable:1b,Damage:24}}}
+execute as @e[tag=magicpower3] at @s run kill @s
+
+tag @e[type=item,nbt={Item:{id:"minecraft:carrot_on_a_stick",tag:{Damage:1,Unbreakable:1b}}},distance=..2] add craftedbase1
+tag @e[type=item,nbt={Item:{id:"minecraft:lapis_lazuli"}},distance=..2] add lapislazuli
+execute as @e[tag=craftedbase1] at @s if entity @e[tag=lapislazuli,distance=..1] if block ~ ~ ~ enchanting_table run tag @s add magicdefense1
+execute as @e[tag=magicdefense1] at @s run kill @e[tag=lapislazuli,distance=..1]
+execute as @e[tag=magicdefense1] at @s run summon minecraft:item ~ ~ ~ {Glowing:1b,CustomNameVisible:1b,PickupDelay:0,Motion:[0.0,0.1,0.0],CustomName:'{"text":"Magic Defense Buff Tier 1","color":"green"}',Item:{id:"minecraft:carrot_on_a_stick",Count:1b,tag:{display:{Name:'{"text":"Magic Defense Buff Tier 1","color":"red"}'},Unbreakable:1b,Damage:25}}}
+execute as @e[tag=magicdefense1] at @s run kill @s
+
+tag @e[type=item,nbt={Item:{id:"minecraft:carrot_on_a_stick",tag:{Damage:2,Unbreakable:1b}}},distance=..2] add craftedbase2
+tag @e[type=item,nbt={Item:{id:"minecraft:lapis_lazuli"}},distance=..2] add lapislazuli
+execute as @e[tag=craftedbase2] at @s if entity @e[tag=lapislazuli,distance=..1] if block ~ ~ ~ enchanting_table run tag @s add magicdefense2
+execute as @e[tag=magicdefense2] at @s run kill @e[tag=lapislazuli,distance=..1]
+execute as @e[tag=magicdefense2] at @s run summon minecraft:item ~ ~ ~ {Glowing:1b,CustomNameVisible:1b,PickupDelay:0,Motion:[0.0,0.1,0.0],CustomName:'{"text":"Magic Defense Buff Tier 2","color":"green"}',Item:{id:"minecraft:carrot_on_a_stick",Count:1b,tag:{display:{Name:'{"text":"Magic Defense Buff Tier 2","color":"red"}'},Unbreakable:1b,Damage:26}}}
+execute as @e[tag=magicdefense2] at @s run kill @s
+
+tag @e[type=item,nbt={Item:{id:"minecraft:carrot_on_a_stick",tag:{Damage:3,Unbreakable:1b}}},distance=..2] add craftedbase3
+tag @e[type=item,nbt={Item:{id:"minecraft:lapis_lazuli"}},distance=..2] add lapislazuli
+execute as @e[tag=craftedbase3] at @s if entity @e[tag=lapislazuli,distance=..1] if block ~ ~ ~ enchanting_table run tag @s add magicdefense3
+execute as @e[tag=magicdefense3] at @s run kill @e[tag=lapislazuli,distance=..1]
+execute as @e[tag=magicdefense3] at @s run summon minecraft:item ~ ~ ~ {Glowing:1b,CustomNameVisible:1b,PickupDelay:0,Motion:[0.0,0.1,0.0],CustomName:'{"text":"Magic Defense Buff Tier 3","color":"green"}',Item:{id:"minecraft:carrot_on_a_stick",Count:1b,tag:{display:{Name:'{"text":"Magic Defense Buff Tier 3","color":"red"}'},Unbreakable:1b,Damage:27}}}
+execute as @e[tag=magicdefense3] at @s run kill @s
