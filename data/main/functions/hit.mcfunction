@@ -5,7 +5,8 @@ execute if entity @s[scores={fireballcooldown=0}] if entity @e[tag=fireballspell
 execute if entity @s[scores={fireballcooldown=0}] if entity @e[tag=fireballspell,type=armor_stand,distance=..2] run function healthsystem:health
 execute if entity @s[scores={fireballcooldown=0}] if entity @e[tag=fireballspell,type=armor_stand,distance=..2] run kill @e[type=armor_stand,tag=fireballspell,distance=..1]
 
-scoreboard players set @e[type=!minecraft:player,type=!armor_stand] fireballcooldown 0
+scoreboard players set @e[type=!minecraft:player,type=!armor_stand,tag=!cooldown1] fireballcooldown 0
+tag @e[tag=!cooldown1] add cooldown1
 
 execute if entity @s[scores={thundercooldown=0..1180}] 
 execute if entity @s[scores={thundercooldown=0..1180}] if entity @e[tag=thunderspell,type=armor_stand,distance=..2,scores={damage=2}] run summon minecraft:lightning_bolt ~ ~ ~
@@ -15,4 +16,5 @@ execute if entity @s[scores={thundercooldown=0..1180}] if entity @e[tag=thunders
 execute if entity @s[scores={thundercooldown=0..1180}] if entity @e[tag=thunderspell,type=armor_stand,distance=..2,scores={damage=3}] run summon minecraft:lightning_bolt ~ ~ ~
 execute if entity @s[scores={thundercooldown=0..1180}] if entity @e[tag=thunderspell,type=armor_stand,distance=..2] run kill @e[type=armor_stand,tag=thunderspell,distance=..2]
 
-scoreboard players set @e[type=!minecraft:player,type=!armor_stand] thundercooldown 0
+scoreboard players set @e[type=!minecraft:player,type=!armor_stand,tag=!cooldown2] thundercooldown 0
+tag @e[tag=!cooldown2] add cooldown2

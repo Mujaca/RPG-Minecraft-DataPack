@@ -5,6 +5,9 @@ scoreboard players reset @s klasse
 
 scoreboard players set @s maxhealth 150
 scoreboard players set @s updatestats 20
+scoreboard players set @s maxmana 50
+scoreboard players set @s mana 50
+
 scoreboard players operation @s updatestats *= @s level
 scoreboard players operation @s maxhealth += @s updatestats
 

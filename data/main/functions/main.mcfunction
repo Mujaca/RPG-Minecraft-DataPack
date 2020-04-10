@@ -12,7 +12,7 @@ execute as @a[team=knight] at @s run function knight:main
 execute as @a[team=engeenier] at @s run function engeenier:main
 
 execute as @a run function main:buffs
-execute as @e at @s run function main:hit
+execute as @e[type=!armor_stand] at @s if entity @e[type=armor_stand,distance=..5] run function main:hit
 
 execute as @a at @s if score @s health > @s maxhealth store result score @s health run scoreboard players get @s maxhealth
 execute as @a at @s if score @s mana > @s maxmana store result score @s mana run scoreboard players get @s maxmana
