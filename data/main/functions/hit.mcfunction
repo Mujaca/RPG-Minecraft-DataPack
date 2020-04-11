@@ -20,4 +20,4 @@ scoreboard players set @e[type=!minecraft:player,type=!armor_stand,tag=!cooldown
 tag @e[tag=!cooldown2] add cooldown2
 
 execute if entity @s[tag=!heal] if entity @e[tag=healspell,type=armor_stand,distance=..2] run scoreboard players operation @s health += @e[tag=healspell,type=armor_stand,distance=..2] damage
-execute if entity @s[tag=!heal] if entity @e[tag=healspell,type=armor_stand,distance=..2] run kill @s
+execute if entity @s[tag=!heal] as @e[tag=healspell,type=armor_stand,distance=..2] run kill @s
