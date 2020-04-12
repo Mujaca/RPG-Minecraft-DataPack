@@ -29,6 +29,19 @@ scoreboard objectives add ostrength dummy
 scoreboard objectives add omagicdefense dummy
 scoreboard objectives add multiplikator dummy
 scoreboard objectives add buffduration dummy
+scoreboard objectives add corpseid dummy
+scoreboard objectives add corpsetime dummy
+scoreboard objectives add revivetime dummy
+scoreboard objectives add turretid dummy
+scoreboard objectives add turretone dummy
+scoreboard objectives add turrettwo dummy
+scoreboard objectives add turretthree dummy
+scoreboard objectives add maxammo dummy
+scoreboard objectives add ammo dummy
+scoreboard objectives add reloadtime dummy
+scoreboard objectives add mreloadtime dummy
+
+scoreboard players set current corpseid 0
 
 scoreboard objectives add klassen trigger
 scoreboard objectives add job trigger

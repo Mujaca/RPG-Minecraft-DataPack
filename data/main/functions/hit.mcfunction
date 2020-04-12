@@ -21,3 +21,8 @@ tag @e[tag=!cooldown2] add cooldown2
 
 execute if entity @s[tag=!heal] if entity @e[tag=healspell,type=armor_stand,distance=..2] run scoreboard players operation @s health += @e[tag=healspell,type=armor_stand,distance=..2] damage
 execute if entity @s[tag=!heal] as @e[tag=healspell,type=armor_stand,distance=..2] run kill @s
+
+execute as @s as @e[type=minecraft:armor_stand,tag=turretone,distance=..2] if score @s turretid = @p[team=engeenier] turretone if entity @e[type=item,nbt={Item:{id:"minecraft:arrow"}},distance=..2] if score @s ammo < @s maxammo run scoreboard players add @s ammo 1
+execute as @s as @e[type=minecraft:armor_stand,tag=turretone,distance=..2] if entity @e[type=item,nbt={Item:{id:"minecraft:arrow"}},distance=..2] if score @s ammo < @s maxammo run kill @e[type=item,nbt={Item:{id:"minecraft:arrow"}},distance=..2,limit=1]
+
+execute as @s as @e[type=minecraft:armor_stand,tag=turretone] if score @s turretid = @p turretid run
