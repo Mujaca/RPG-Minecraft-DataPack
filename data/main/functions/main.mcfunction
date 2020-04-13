@@ -15,7 +15,7 @@ execute as @a at @s run function pets:main
 execute as @e[type=!player,team=!nocollision] run team join nocollision @s
 
 execute as @a run function main:buffs
-execute as @e[type=!armor_stand] at @s if entity @e[type=armor_stand,distance=..5] run function main:hit
+execute as @a at @s if entity @e[type=armor_stand,distance=..5] run function main:hit
 
 execute as @a at @s run function healthsystem:corpse
 

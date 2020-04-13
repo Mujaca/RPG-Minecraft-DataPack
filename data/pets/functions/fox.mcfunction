@@ -1,2 +1,2 @@
-execute as @s at @s if score @s sneaktime = @s null unless score @s petid < @s null as @e[type=fox,tag=pet,tag=gotid] if score @s petid = @p[tag=haspet] petid run tp ~ ~1.8 ~
-execute as @s at @s unless score @s sneaktime = @s null unless score @s petid < @s null as @e[type=fox,tag=pet,tag=gotid] if score @s petid = @p[tag=haspet] petid run tp ~ ~1.6 ~
+execute as @s[tag=haspet] at @s if score @s sneaktime = @s null unless score @s petid < @s null as @e[type=fox,tag=pet,tag=gotid] if score @s petid = @p[tag=haspet] petid run tp ~ ~1.8 ~0.1
+execute as @s[tag=haspet] at @s unless score @s sneaktime = @s null unless score @s petid < @s null as @e[type=fox,tag=pet,tag=gotid] if score @s petid = @p[tag=haspet] petid run tp ~ ~1.6 ~
