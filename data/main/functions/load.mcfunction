@@ -40,6 +40,9 @@ scoreboard objectives add maxammo dummy
 scoreboard objectives add ammo dummy
 scoreboard objectives add reloadtime dummy
 scoreboard objectives add mreloadtime dummy
+scoreboard objectives add hatchtime dummy
+scoreboard objectives add petid dummy
+scoreboard objectives add sneaktime minecraft.custom:minecraft.sneak_time
 
 scoreboard players set current corpseid 0
 
@@ -55,5 +58,8 @@ team add priest
 team add paladin
 team add knight
 team add engeenier
+team add nocollision
+
+team modify nocollision collisionRule never
 
 say DataPack loaded

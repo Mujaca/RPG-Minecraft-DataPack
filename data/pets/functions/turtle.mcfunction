@@ -1,0 +1,2 @@
+execute as @s at @s if score @s sneaktime = @s null unless score @s petid < @s null as @e[type=turtle,tag=pet,tag=gotid] if score @s petid = @p[tag=haspet] petid run tp ^1 ^1.5 ^0.2
+execute as @s at @s unless score @s sneaktime = @s null unless score @s petid < @s null as @e[type=turtle,tag=pet,tag=gotid] if score @s petid = @p[tag=haspet] petid run tp ^1 ^1.3 ^0.2
