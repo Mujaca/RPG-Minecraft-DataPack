@@ -1,4 +1,3 @@
-execute as @a[scores={level=5..}] at @s run function main:lecterncheck
 execute as @a[scores={klassen=1..}] run function main:jobchoose
 function nojob:xp
 

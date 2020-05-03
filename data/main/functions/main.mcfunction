@@ -17,7 +17,11 @@ execute as @e[type=!player,team=!nocollision] run team join nocollision @s
 execute as @a run function main:buffs
 execute as @a at @s if entity @e[type=armor_stand,distance=..5] run function main:hit
 
+execute as @a[scores={level=5..}] at @s run function main:lecterncheck
+
 execute as @a at @s run function healthsystem:corpse
+
+execute as @a at @s run function npcs:main
 
 #function healthsystem:updatemobs
 

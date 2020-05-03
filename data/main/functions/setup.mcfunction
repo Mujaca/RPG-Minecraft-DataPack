@@ -20,6 +20,9 @@ scoreboard players set @s meteorcooldown 0
 scoreboard players set @s meteorcooldown 0
 scoreboard players set @s buffduration 0
 scoreboard players set @s buffcooldown 0
+scoreboard players set @s mana 0
+scoreboard players set @s quest 0
+
 
 team join nojob @s
 

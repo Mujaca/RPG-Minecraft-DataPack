@@ -43,6 +43,8 @@ scoreboard objectives add mreloadtime dummy
 scoreboard objectives add hatchtime dummy
 scoreboard objectives add petid dummy
 scoreboard objectives add sneaktime minecraft.custom:minecraft.sneak_time
+scoreboard objectives add skills trigger
+scoreboard objectives add quest dummy
 
 scoreboard players set current corpseid 0
 

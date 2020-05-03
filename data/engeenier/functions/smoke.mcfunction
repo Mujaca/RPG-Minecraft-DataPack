@@ -1,0 +1,4 @@
+execute as @s[nbt={SelectedItem:{id:"minecraft:carrot_on_a_stick",tag:{Unbreakable:1b,Damage:32}}},scores={click=1..}] run particle minecraft:cloud ~ ~2 ~ 1 0 1 0.1 10000 force @a
+execute as @s[nbt={SelectedItem:{id:"minecraft:carrot_on_a_stick",tag:{Unbreakable:1b,Damage:32}}},scores={click=1..}] run effect give @s minecraft:invisibility 10 5 true
+execute as @s[nbt={SelectedItem:{id:"minecraft:carrot_on_a_stick",tag:{Unbreakable:1b,Damage:32}}},scores={click=1..}] run effect give @s speed 10 1
+execute as @s[nbt={SelectedItem:{id:"minecraft:carrot_on_a_stick",tag:{Unbreakable:1b,Damage:32}}},scores={click=1..}] run clear @s carrot_on_a_stick{Unbreakable:1b,Damage:32} 1

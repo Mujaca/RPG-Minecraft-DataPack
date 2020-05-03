@@ -5,7 +5,7 @@ scoreboard players reset @s klasse
 
 scoreboard players set @s maxmana 100
 scoreboard players set @s maxmana 100
-scoreboard players set @s manaregen 5
+scoreboard players set @s manaregen 10
 
 scoreboard players set @s maxhealth 100
 scoreboard players set @s updatestats 10

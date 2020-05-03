@@ -1,0 +1,1 @@
+execute as @s[tag=haspet] at @s unless score @s petid < @s null as @e[type=cat,tag=pet,tag=gotid] if score @s petid = @p[tag=haspet] petid run tp ^0.7 ^ ^

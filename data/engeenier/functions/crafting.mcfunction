@@ -11,3 +11,10 @@ execute as @e[tag=turretbase1] at @s if entity @e[tag=bow,distance=..1] run tag 
 execute as @e[tag=turret1] at @s run kill @e[tag=bow,distance=..1]
 execute as @e[tag=turret1] at @s run summon minecraft:item ~ ~ ~ {Glowing:1b,CustomNameVisible:1b,PickupDelay:0,Motion:[0.0,0.1,0.0],CustomName:'{"text":"Turret 1","color":"green"}',Item:{id:"minecraft:carrot_on_a_stick",Count:1b,tag:{display:{Name:'{"text":"Turret 1","color":"green"}'},Unbreakable:1b,Damage:31}}}
 execute as @e[tag=turret1] at @s run kill @s
+
+tag @e[type=item,nbt={Item:{id:"minecraft:glass_bottle"}},distance=..2] add glassbottle
+tag @e[type=item,nbt={Item:{id:"minecraft:quartz"}},distance=..2] add quartz
+execute as @e[tag=glassbottle] at @s if entity @e[tag=quartz,distance=..1] run tag @s add smoke
+execute as @e[tag=smoke] at @s run kill @e[tag=quartz,distance=..1]
+execute as @e[tag=smoke] at @s run summon minecraft:item ~ ~ ~ {Glowing:1b,CustomNameVisible:1b,PickupDelay:0,Motion:[0.0,0.1,0.0],CustomName:'{"text":"Smoke Granate","color":"green"}',Item:{id:"minecraft:carrot_on_a_stick",Count:1b,tag:{display:{Name:'{"text":"Smoke Granate","color":"green"}'},Unbreakable:1b,Damage:32}}}
+execute as @e[tag=smoke] at @s run kill @s
